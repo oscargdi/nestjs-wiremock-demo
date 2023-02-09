@@ -1,13 +1,13 @@
 {
-    "request": {
-        "method": "GET",
-        "url": "/index"
+  "request": {
+    "method": "GET",
+    "url": "/index"
+  },
+  "response": {
+    "bodyFileName": "index.json",
+    "headers": {
+      "Content-Type": "application/json"
     },
-    "response": {
-        "status": 200,
-        "headers": {
-            "Content-Type": "application/json"
-    },
-        "bodyFileName": "index.json"
-    }
+    "status": 200
+  }
 }
