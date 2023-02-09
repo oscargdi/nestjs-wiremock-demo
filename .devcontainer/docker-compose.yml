@@ -11,6 +11,9 @@ services:
 
     command: sleep infinity
 
+    environment:
+    - APP_PORT=3000
+
   wiremock:
     image: wiremock/wiremock
     ports:
