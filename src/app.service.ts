@@ -1,10 +1,13 @@
+import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
+import { lastValueFrom } from 'rxjs';
 
 @Injectable()
 export class AppService {
-  constructor(private configService: ConfigService) {}
-  getHello(): string {
-    return this.configService.get('APP_PORT');
+  constructor(private readonly httpService: HttpService) {}
+
+  async getIndex(): Promise<any> {
+    const { data } = await lastValueFrom(this.httpService.get('/index'));
+    return data;
   }
 }
