@@ -6,8 +6,10 @@ import { lastValueFrom } from 'rxjs';
 export class AppService {
   constructor(private readonly httpService: HttpService) {}
 
-  async getIndex(): Promise<any> {
-    const { data } = await lastValueFrom(this.httpService.get('/index'));
+  async getIndex(country: string): Promise<any> {
+    const { data } = await lastValueFrom(
+      this.httpService.get(`/${country}/index`),
+    );
     return data;
   }
 }

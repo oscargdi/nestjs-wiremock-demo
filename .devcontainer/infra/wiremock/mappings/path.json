@@ -1,10 +1,10 @@
 {
   "request": {
     "method": "GET",
-    "url": "/index"
+    "url": "/CO/index"
   },
   "response": {
-    "bodyFileName": "index.json",
+    "bodyFileName": "path.json",
     "headers": {
       "Content-Type": "application/json"
     },
