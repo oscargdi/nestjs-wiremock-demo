@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "createdAt": "2023-02-08T16:40:38.153Z",
+      "status": "pending",
+      "store": "Gas Station",
+      "value": 15.5
+    },
+    {
+      "createdAt": "2023-02-08T17:49:14.456Z",
+      "status": "pending",
+      "store": "Supermarket",
+      "value": 50.0
+    },
+    {
+      "createdAt": "2023-02-08T16:01:23.234Z",
+      "status": "pending",
+      "store": "Grocery Store",
+      "value": 120.5
+    }
+  ]
+}

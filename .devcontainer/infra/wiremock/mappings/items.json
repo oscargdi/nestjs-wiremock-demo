@@ -1,0 +1,23 @@
+{
+  "request": {
+    "headers": {
+      "country": {
+        "equalTo": "CO"
+      }
+    },
+    "method": "GET",
+    "queryParameters": {
+      "status": {
+        "equalTo": "pending"
+      }
+    },
+    "urlPath": "/0cf82ca5-e6b5-4757-b887-0a61e0f5871a/items"
+  },
+  "response": {
+    "bodyFileName": "items.json",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "status": 200
+  }
+}
