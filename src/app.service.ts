@@ -1,6 +1,6 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
-import { lastValueFrom } from 'rxjs';
+import { map } from 'rxjs';
 
 @Injectable()
 export class AppService {
@@ -10,13 +10,12 @@ export class AppService {
     country: string,
     userId: string,
     status: string,
-  ): Promise<any> {
-    const { data } = await lastValueFrom(
-      this.httpService.get(`/${userId}/items`, {
+  ) {
+    return this.httpService
+      .get(`/${userId}/items`, {
         headers: { country: country },
         params: { status: status },
-      }),
-    );
-    return data;
+      })
+      .pipe(map((res) => res.data));
   }
 }

@@ -22,7 +22,7 @@ export class AppController {
     @Headers('country') country: string,
     @Param('userId') userId: string,
     @Query('status') status: string,
-  ): Promise<any> {
+  ) {
     return this.appService.getTransactionsByUserId(country, userId, status);
   }
 }
