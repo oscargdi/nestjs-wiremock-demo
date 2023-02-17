@@ -6,11 +6,7 @@ import { map } from 'rxjs';
 export class AppService {
   constructor(private readonly httpService: HttpService) {}
 
-  async getTransactionsByUserId(
-    country: string,
-    userId: string,
-    status: string,
-  ) {
+  getTransactionsByUserId(country: string, userId: string, status: string) {
     return this.httpService
       .get(`/${userId}/items`, {
         headers: { country: country },
