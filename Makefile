@@ -5,3 +5,7 @@ help:
 .PHONY: wiremock
 wiremock: ## (devcontainer) Refresh wiremock mappings
 	curl -X POST http://wiremock:8080/__admin/mappings/reset
+
+.PHONY: pcr
+pcr: ## Run pre-commit
+	pre-commit run --all-files

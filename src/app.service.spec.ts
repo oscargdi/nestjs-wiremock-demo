@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 
 describe('AppService', () => {
   let service: AppService;
+  const nock = require('nock');
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -16,5 +17,18 @@ describe('AppService', () => {
 
   it('should be defined', () => {
     expect(service).toBeDefined();
+  });
+
+  it('should return valid response', () => {
+    nock('http://localhost')
+      .get('/12345/items')
+      .query({ status: 'pending' })
+      .reply(200, { message: 'hello' });
+
+    service
+      .getTransactionsByUserId('co', '12345', 'pending')
+      .subscribe((res) => {
+        expect(res).toEqual({ message: 'hello' });
+      });
   });
 });
