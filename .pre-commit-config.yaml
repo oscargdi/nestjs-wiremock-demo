@@ -14,7 +14,7 @@ repos:
   - id: check-shebang-scripts-are-executable
 
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-  rev: v2.4.0
+  rev: v2.8.0
   hooks:
   - id: pretty-format-yaml
     args: [--autofix, --preserve-quotes, --indent, '2']

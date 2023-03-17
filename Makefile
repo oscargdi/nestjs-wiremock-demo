@@ -9,3 +9,7 @@ wiremock: ## (devcontainer) Refresh wiremock mappings
 .PHONY: pcr
 pcr: ## Run pre-commit
 	pre-commit run --all-files
+
+.PHONY: run
+run: ## Run docker compose service
+	docker compose -f .devcontainer/docker-compose.yml run --rm --service-ports $(SERVICE) $(COMMAND)
